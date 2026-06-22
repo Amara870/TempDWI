@@ -11,39 +11,48 @@
         <header>Hero Information</header>
     </body>
 
+    <!--Character form-->
     <form name="frmHero" id="frmHero">
+        <!--Username label and input-->
         <div>
             <label for="txtUsername">Username: </label>
             <input type="text" id="txtUsername" name="txtUsername" placeholder="Username">
         </div>
 
+        <!--Skill label and input-->
         <div>
             <label for="txtSkill">Special Skill: </label>
             <input type="text" id="txtSkill" name="txtSkill" placeholder="Skill">
         </div>
 
+        <!--Weapon label and input-->
         <div>
             <label for="txtWeapon">Weapon: </label>
             <input type="text" id="txtWeapon" name="txtWeapon" placeholder="txtWeapon">
         </div>
 
+        <!--Health label and input-->
         <div>
             <label for="numHealth">Health: </label>
             <input type="number" id="numHealth" name="numHealth" placeholder="numHealth">
         </div>
 
+        <!--Point Total: label and input-->
         <div>
             <label for="numPoints">Point Total: </label>
             <input type="number" id="numPoints" name="numPoints" placeholder="numPoints">
         </div>
         
+        <!--Submit button-->
         <button type="button" onclick="saveInfo()">Save Hero!</button>
     </form>
 
     <div>
         <h2>Hero Info:</h2>
+        <!--Readonly text area to display inputs-->
         <textarea id="textHero" readonly rows="5" cols="30"></textarea>
     </div>
 
+    <!--Link javascript-->
     <script src="script.js"></script>
 </html>
