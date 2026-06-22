@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device, initial-scale=1.0">
+        <title>Main Page</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <header>Hero Information</header>
+    </body>
+
+    <form name="frmHero" id="frmHero">
+        <div>
+            <label for="txtUsername">Username: </label>
+            <input type="text" id="txtUsername" name="txtUsername" placeholder="Username">
+        </div>
+
+        <div>
+            <label for="txtSkill">Special Skill: </label>
+            <input type="text" id="txtSkill" name="txtSkill" placeholder="Skill">
+        </div>
+
+        <div>
+            <label for="txtWeapon">Weapon: </label>
+            <input type="text" id="txtWeapon" name="txtWeapon" placeholder="txtWeapon">
+        </div>
+
+        <div>
+            <label for="numHealth">Health: </label>
+            <input type="number" id="numHealth" name="numHealth" placeholder="numHealth">
+        </div>
+
+        <div>
+            <label for="numPoints">Point Total: </label>
+            <input type="number" id="numPoints" name="numPoints" placeholder="numPoints">
+        </div>
+        
+        <button type="button" onclick="saveInfo()">Save Hero!</button>
+    </form>
+
+    <div>
+        <h2>Hero Info:</h2>
+        <textarea id="textHero" readonly rows="5" cols="30"></textarea>
+    </div>
+
+    <script src="script.js"></script>
+</html>
