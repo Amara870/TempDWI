@@ -1,26 +1,23 @@
-// save info function
-function saveInfo() {
-    // add element ids to variable
-    let txtUsername = document.getElementById("txtUsername");
-    let txtSkill = document.getElementById("txtSkill");
-    let txtWeapon = document.getElementById("txtWeapon");
-    let numHealth = document.getElementById("numHealth");
-    let numPoints = document.getElementById("numPoints");
+function buildPuzzle(cols, rows) {
+    // shortcut to the table
+    let puzzle = document.getElementById("puzzle");
 
-    // format user inputs
-    let output = "Username: " + txtUsername.value + "\n\n" +
-        "Special Skill: " + txtSkill.value + "\n\n" +
-        "Weapon: " + txtWeapon.value + "\n\n" +
-        "Health: " + numHealth.value + "\n\n" +
-        "Total Points: " + numPoints.value;
-    // display inputs
-    document.getElementById("textHero").value = output;
+    // build out the rows and tables
+    for (let i = 0; i < rows; i++) {
+        let tr = document.createElement("tr");
 
+        // create each column
+        for (let j = 0; i < cols; j++) {
+            // build a column each time this loop runs
+            let td = document.createElement("td");
+            // add column to row
+            tr.appendChild(td);
+        }
 
-    // reset input boxes
-    txtUsername.value = "";
-    txtSkill.value = "";
-    numHealth.value = "";
-    numPoints.value = "";
-    txtWeapon.value = "";
+        // add the row to the table
+        puzzle.appendChild(tr);
+    }
 }
+
+buildPuzzle(10, 9);
+ 
