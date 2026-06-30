@@ -18,6 +18,4 @@ function buildPuzzle(cols, rows) {
         puzzle.appendChild(tr);
     }
 }
-
-buildPuzzle(10, 9);
  
