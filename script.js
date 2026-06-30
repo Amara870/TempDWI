@@ -7,7 +7,7 @@ function buildPuzzle(cols, rows) {
         let tr = document.createElement("tr");
 
         // create each column
-        for (let j = 0; i < cols; j++) {
+        for (let j = 0; j < cols; j++) {
             // build a column each time this loop runs
             let td = document.createElement("td");
             // add column to row
