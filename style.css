@@ -1,23 +1,19 @@
-table, tr{
-    border: 3px solid black;
-    border-radius: 8px;
-    border-collapse: collapse;
-}
-
-td {
-    padding: 1px;
-    background-color: blueviolet;
-    width: 40px;
-    height: 40px;
-    border: 3px solid grey;
-    border-radius: 4px;
-    position: relative;
-}
-
-input {
-    width: 90%;
-    height: 90%;
-    border: none;
+body {
     text-align: center;
-    margin: 0 auto;
+    background-color: rgb(216, 113, 241);
+}
+
+.cell {
+height: 30px;
+width: 30px;
+border: 1.5px solid grey;
+border-style: inset;
+}
+
+.blackcell {
+background-color: black;
+}
+
+.whitecell {
+background-color: white;
 }

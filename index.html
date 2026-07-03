@@ -1,39 +1,20 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
     <head>
+        <!--Meta data to give the browser information about the website-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width-device, initial-scale=1.0">
-        <title>Crossword Puzzle</title>
+        <title>Chessboard</title>
+        <!--Cascading Style Sheet-->
         <link rel="stylesheet" href="style.css">
     </head>
-
     <body>
-        <header>
-            <h1>Crossword Puzzle</h1>
-        </header>
-
-        <main>
-            <!--Create table to hold crossword puzzle-->
-            <table id="puzzle"></table>
-
-            <h2>Clues</h2>
-            <h3>Across: </h3>
-            <ol>
-                <li>Client-side scripting language used in this class</li>
-                <li>What coding is to some</li>
-            </ol>
-
-            <h3>Down:</h3>
-            <ol>
-                <li>First word in CSS</li>
-                <li>Markup language that uses tags to surround text and images</li>
-                <li>Second word in CSS</li>
-            </ol>
-        </main>
-
-        <script src="script.js"></script>
-        <script>
-            buildPuzzle(10, 9);
-        </script>
+        <!--In-line CSS for title-->
+        <span style="color:rgb(33, 0, 179); font-size:30px;">
+            Chessboard
+        </span>
+        <br><br>
+    <!--Script for Chessboard-->
+    <script src="script.js"></script>
     </body>
 </html>
