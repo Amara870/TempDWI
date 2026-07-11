@@ -3,17 +3,32 @@ body {
     background-color: rgb(216, 113, 241);
 }
 
-.cell {
-height: 30px;
-width: 30px;
-border: 1.5px solid grey;
-border-style: inset;
+#divChessBoard {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    margin-left: 35%;
 }
 
-.blackcell {
-background-color: black;
+.chessSquare {
+    float: left;
+    width: 50px;
+    height: 50px;
 }
 
-.whitecell {
-background-color: white;
+.chessPiece {
+    width: 45px;
+    height: 45px;
+    margin: 2.5px;
+    /* this create a circle */
+    border-radius: 50%;
+    box-shadow: 4px 4px 4px purple;
+}
+
+.chessPiece-w {
+    background-color: aliceblue;
+}
+
+.chessPiece-b {
+    background-color: black;
 }

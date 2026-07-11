@@ -1,35 +1,61 @@
-// center chessboard on page variable
-var center = document.createElement('center');
-// chessboard variable
-var ChessTable = document.createElement('table');
+// nickname shortcut to element
+let chessBoard = document.getElementById("divChessBoard");
 
-// function to create chessboard
-function createChessboard() {
-    // create tables rows
-    for (var i = 0; i < 8; i++) {
-        var tr = document.createElement('tr');
-        // create table column for each row
-        for (var j = 0; j < 8; j++) {
-            var td = document.createElement('td');
-            // determine and color every other cell white
-            if ((i + j) % 2 == 0) {
-                td.setAttribute('class', 'cell whitecell');
-                tr.appendChild(td);
+let arrPieces = [
+    [null, "w", null, "w", null, "w", null, "w"],
+    ["w", null, "w", null, "w", null, "w", null],
+    [null, "w", null, "w", null, "w", null, "w"],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    ["b", null, "b", null, "b", null, "b", null],
+    [null, "b", null, "b", null, "b", null, "b"],
+    ["b", null, "b", null, "b", null, "b", null]
+];
+
+function buildChessBoard() {
+    // create 8 rows
+    for (let i = 0; i < 8; i++) {
+        // create 8 columns
+        for (let j = 0; j < 8; j++) {
+            // create div for each chessboard square
+            let chessSquare = document.createElement("div");
+
+            // add css class to the div
+            chessSquare.className = "chessSquare";
+
+            // use modulo to alternate colors of the squares
+            if ((i+j) % 2 == 0) {
+                chessSquare.style.backgroundColor = "black";
             }
-            // color all other cells black
             else {
-                td.setAttribute('class', 'cell blackcell');
-                tr.appendChild(td);
+                chessSquare.style.backgroundColor = "white";
+            }
+
+            // add square to board
+            chessBoard.appendChild(chessSquare);
+
+
+            if (arrPieces[i][j]) {
+                // specify ID, CSS class, and the location of the piece
+                createPiece("piece" + i + j, "chessPiece-" + arrPieces[i][j], chessSquare)
             }
         }
-        // create chessboard
-        ChessTable.appendChild(tr);
     }
-    // center and style chessboard
-    center.appendChild(ChessTable);
-    ChessTable.setAttribute('cellspacing', '0');
-    ChessTable.setAttribute('width', '270px');
-    document.body.appendChild(center);
 }
-// call function
-createChessboard();
+
+function createPiece (pieceID, pieceClass, theSquare) {
+    let divNewPiece = document.createElement("div");
+
+    // specify ID
+    divNewPiece.setAttribute("id", "pieceID");
+
+    // specify Class
+    divNewPiece.classList.add("chessPiece");
+
+    // specify class for color
+    divNewPiece.classList.add(pieceClass);
+
+    theSquare.appendChild(divNewPiece);
+}
+
+buildChessBoard();
